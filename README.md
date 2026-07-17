@@ -140,12 +140,21 @@ This section exists on purpose — a backtest without its caveats is marketing.
 
 ## 🗺️ Roadmap
 
+**Implemented — awaiting data to run** *(engine in [`src/backtest.py`](src/backtest.py), analyses in [`notebooks/QQQ_bias_v2.ipynb`](notebooks/QQQ_bias_v2.ipynb); engine smoke-tested on synthetic data, including deterministic accounting checks)*
+
+- [x] Refactor the three copy-pasted backtest loops into one parameterised engine
+- [x] Run the replication on unfiltered QQQ data (decouple it from NQ availability)
+- [x] Whole-day session filtering, DST-safe NQ timestamps, commission modelling
+- [x] Placebo test: QQQ 09:25 pre-market bar instead of NQ
+- [x] Per-trade t-stat, bootstrap CI on Sharpe, per-year PnL breakdown
+- [x] PnL-vs-slippage sensitivity curve
+
+**Open**
+
+- [ ] Re-run everything on real data and update the results above (numbers in this README are still from the v1 notebook)
 - [ ] Extend the sample to 2023–2026 (true out-of-sample for both signal and filter)
-- [ ] Placebo test: QQQ 09:25 pre-market bar instead of NQ
-- [ ] Per-trade t-stat, bootstrap CI on Sharpe, per-year PnL breakdown
-- [ ] PnL-vs-slippage sensitivity curve; volatility-scaled stop slippage
-- [ ] Refactor the three copy-pasted backtest loops into one parameterised engine
-- [ ] Run the replication on unfiltered QQQ data (decouple it from NQ availability)
+- [ ] Volatility-scaled stop slippage for gap days
+- [ ] Dividend-adjusted, risk-free-adjusted benchmark comparison
 
 ---
 
@@ -158,7 +167,10 @@ This section exists on purpose — a backtest without its caveats is marketing.
 ├── 📚 docs/
 │   └── ssrn-4416622.pdf     # the paper being replicated
 ├── 📓 notebooks/
-│   └── QQQ_bias.ipynb       # replication → slippage → NQ filter, with diagnostics
+│   ├── QQQ_bias.ipynb       # v1 — original replication (kept for provenance)
+│   └── QQQ_bias_v2.ipynb    # v2 — refactored engine + placebo, t-stats, bootstrap, sensitivity
+├── 🧩 src/
+│   └── backtest.py          # parameterised engine: data loaders, backtest, statistics
 └── 📦 requirements.txt
 ```
 
