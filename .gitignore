@@ -1,0 +1,17 @@
+# Data (local only — see data/README.md)
+data/*.csv
+data/*.parquet
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS / editors
+.DS_Store
+.vscode/
+.idea/
