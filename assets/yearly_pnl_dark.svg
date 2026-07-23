@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="430" viewBox="0 0 820 430" role="img">
+<text x="16" y="26" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15" fill="#ffffff" font-weight="700" text-anchor="start">Where the PnL comes from — net PnL by year</text>
+<text x="16" y="46" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="10.8" fill="#898781" font-weight="normal" text-anchor="start">2022 alone is 38% of the replication and 76% of the NQ-filtered PnL; the filter is negative in 2017, 2020, 2023</text>
+<rect x="70" y="60" width="11" height="11" rx="2" fill="#45443f"/>
+<text x="87" y="70" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="11.5" fill="#c3c2b7" font-weight="normal" text-anchor="start">Replication (no slippage)</text>
+<rect x="275" y="60" width="11" height="11" rx="2" fill="#3987e5"/>
+<text x="292" y="70" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="11.5" fill="#c3c2b7" font-weight="normal" text-anchor="start">NQ 09:25 filter (+slippage)</text>
+<line x1="70" y1="378.0" x2="800" y2="378.0" stroke="#2c2c2a" stroke-width="1"/>
+<text x="60" y="382.0" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="11" fill="#898781" font-weight="normal" text-anchor="end">$-30k</text>
+<line x1="70" y1="282.7" x2="800" y2="282.7" stroke="#2c2c2a" stroke-width="1"/>
+<text x="60" y="286.66666666666663" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="11" fill="#898781" font-weight="normal" text-anchor="end">$0k</text>
+<line x1="70" y1="187.3" x2="800" y2="187.3" stroke="#2c2c2a" stroke-width="1"/>
+<text x="60" y="191.33333333333331" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="11" fill="#898781" font-weight="normal" text-anchor="end">$30k</text>
+<line x1="70" y1="92.0" x2="800" y2="92.0" stroke="#2c2c2a" stroke-width="1"/>
+<text x="60" y="96.0" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="11" fill="#898781" font-weight="normal" text-anchor="end">$60k</text>
+<line x1="70" y1="282.7" x2="800" y2="282.7" stroke="#383835" stroke-width="1.5"/>
+<path d="M99.6,282.7 v-52.3 a4,4 0 0 1 4,-4 h7 a4,4 0 0 1 4,4 v52.3 z" fill="#45443f"/>
+<path d="M116.6,282.7 v-20.6 a4,4 0 0 1 4,-4 h7 a4,4 0 0 1 4,4 v20.6 z" fill="#3987e5"/>
+<text x="115.625" y="398" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="11" fill="#898781" font-weight="normal" text-anchor="middle">2016</text>
+<path d="M190.9,282.7 v-1.5 a4,4 0 0 1 4,-4 h7 a4,4 0 0 1 4,4 v1.5 z" fill="#45443f"/>
+<path d="M207.9,282.7 v11.3 a4,4 0 0 0 4,4 h7 a4,4 0 0 0 4,-4 v-11.3 z" fill="#3987e5"/>
+<text x="206.875" y="398" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="11" fill="#898781" font-weight="normal" text-anchor="middle">2017</text>
+<path d="M282.1,282.7 v-81.3 a4,4 0 0 1 4,-4 h7 a4,4 0 0 1 4,4 v81.3 z" fill="#45443f"/>
+<path d="M299.1,282.7 v-13.2 a4,4 0 0 1 4,-4 h7 a4,4 0 0 1 4,4 v13.2 z" fill="#3987e5"/>
+<text x="298.125" y="398" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="11" fill="#898781" font-weight="normal" text-anchor="middle">2018</text>
+<path d="M373.4,282.7 v-51.9 a4,4 0 0 1 4,-4 h7 a4,4 0 0 1 4,4 v51.9 z" fill="#45443f"/>
+<path d="M390.4,282.7 v-13.6 a4,4 0 0 1 4,-4 h7 a4,4 0 0 1 4,4 v13.6 z" fill="#3987e5"/>
+<text x="389.375" y="398" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="11" fill="#898781" font-weight="normal" text-anchor="middle">2019</text>
+<path d="M464.6,282.7 v-41.0 a4,4 0 0 1 4,-4 h7 a4,4 0 0 1 4,4 v41.0 z" fill="#45443f"/>
+<path d="M481.6,282.7 v17.7 a4,4 0 0 0 4,4 h7 a4,4 0 0 0 4,-4 v-17.7 z" fill="#3987e5"/>
+<text x="480.625" y="398" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="11" fill="#898781" font-weight="normal" text-anchor="middle">2020</text>
+<path d="M555.9,282.7 v-95.9 a4,4 0 0 1 4,-4 h7 a4,4 0 0 1 4,4 v95.9 z" fill="#45443f"/>
+<path d="M572.9,282.7 v-28.9 a4,4 0 0 1 4,-4 h7 a4,4 0 0 1 4,4 v28.9 z" fill="#3987e5"/>
+<text x="571.875" y="398" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="11" fill="#898781" font-weight="normal" text-anchor="middle">2021</text>
+<path d="M647.1,282.7 v-165.3 a4,4 0 0 1 4,-4 h7 a4,4 0 0 1 4,4 v165.3 z" fill="#45443f"/>
+<path d="M664.1,282.7 v-101.0 a4,4 0 0 1 4,-4 h7 a4,4 0 0 1 4,4 v101.0 z" fill="#3987e5"/>
+<text x="663.125" y="398" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="11" fill="#898781" font-weight="normal" text-anchor="middle">2022</text>
+<path d="M738.4,282.7 v72.5 a4,4 0 0 0 4,4 h7 a4,4 0 0 0 4,-4 v-72.5 z" fill="#45443f"/>
+<path d="M755.4,282.7 v18.9 a4,4 0 0 0 4,4 h7 a4,4 0 0 0 4,-4 v-18.9 z" fill="#3987e5"/>
+<text x="754.375" y="398" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="11" fill="#898781" font-weight="normal" text-anchor="middle">2023</text>
+<text x="671.625" y="169.65699999999998" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="11" fill="#3987e5" font-weight="700" text-anchor="middle">$33k</text>
+</svg>

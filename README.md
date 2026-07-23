@@ -7,10 +7,11 @@
 
 Independent replication of the **5-minute Opening Range Breakout on QQQ** from
 [*Can Day Trading Really Be Profitable?* (Zarattini & Aziz, SSRN 4416622)](docs/ssrn-4416622.pdf) —
-followed by two questions the paper never asks:
+followed by three questions the paper never asks:
 
-> **1. Does the edge survive realistic execution costs?** *(Mostly no.)*
-> **2. Can a cross-market confirmation filter buy it back?** *(Partially — with caveats.)*
+> **1. Does the edge survive realistic execution costs?** → *Barely — break-even at ~2.2¢/share.*
+> **2. Can a cross-market confirmation filter buy it back?** → *Partially, and it is more than a momentum proxy.*
+> **3. Is the edge structural or a single-regime artifact?** → *Mostly a 2022 phenomenon.*
 
 ---
 
@@ -18,25 +19,36 @@ followed by two questions the paper never asks:
 
 | | |
 |---|---|
-| 🎯 **Replication** | Paper's rules reproduced within noise: Sharpe **1.06** vs paper's 1.12, 1,771 trades vs 1,795 |
-| 💸 **Key finding** | The gross edge is **$0.072/share** — just **$0.02/share** of slippage wipes out ~96% of net PnL |
-| 🔀 **Recovery attempt** | Requiring the 09:25 NQ futures bar to agree halves trade count and lifts edge to **$0.126/share** |
-| ⚠️ **Honest caveat** | The filter is selected **in-sample**; sample ends Feb 2023; not statistically distinguishable from buy & hold yet |
+| 🎯 **Replication** | Reproduced within noise — **1,775 trades** (paper: 1,795), Sharpe **1.06** (paper: 1.12) |
+| 💸 **Execution kills it** | Gross edge **$0.070/share**; net PnL crosses **zero at ~2.2¢/share** of slippage — the edge lives *inside* the bid-ask spread |
+| 🔀 **NQ filter helps, and it's real** | Requiring the 09:25 NQ bar to agree lifts edge to **$0.127/share**, per-trade **t-stat 2.07** (significant); the QQQ-own placebo does not clear significance |
+| ⚠️ **But it's fragile** | **76%** of the filtered PnL is 2022 alone; the filter loses money in 2017, 2020 and early 2023 |
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/pnl_stress_dark.svg">
-  <img alt="Net PnL under execution stress: paper replication $139,127; with $0.02/share slippage $5,068; slippage plus NQ 09:25 filter $45,317" src="assets/pnl_stress_light.svg">
+  <img alt="Net PnL under execution stress: paper replication $138,639; with $0.02/share slippage $4,860; slippage plus NQ 09:25 filter $43,246; slippage plus QQQ 09:25 placebo $25,191" src="assets/pnl_stress_light.svg">
 </picture>
 
-*The single most important chart in the repo: the published result is an artifact
-of assuming free execution. The strategy's per-share edge lives **inside** the
-bid-ask spread.*
+---
+
+## 🔑 The headline chart: the edge is inside the spread
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/slippage_sensitivity_dark.svg">
+  <img alt="Line chart of net PnL as entry slippage sweeps from 0 to 5 cents per share; PnL falls from $138,639 to negative, crossing zero at about 2.2 cents" src="assets/slippage_sensitivity_light.svg">
+</picture>
+
+The published $138,639 assumes **zero slippage**. Sweep entry slippage from 0 to
+5¢ (stop slippage at 2×) and net PnL crosses zero at **~2.2¢/share**. Since QQQ's
+bid-ask spread is ~1¢, this is not a comfortable margin — it is an edge that
+survives or dies on execution quality. The paper's own assumption ("we assumed no
+slippage in fills") is the single load-bearing input behind its headline result.
 
 ---
 
 ## ⚙️ Strategy rules
 
-Evaluated on QQQ 5-minute bars, **Jan 2016 → Feb 2023**, $25,000 starting capital.
+QQQ 5-minute bars, **Jan 2016 → Feb 2023**, $25,000 starting capital.
 
 ```mermaid
 flowchart LR
@@ -51,110 +63,101 @@ flowchart LR
     F --> G
 ```
 
-**Sizing & costs**
-
-- Position size = `min(1% equity / $R, 4 × equity / entry)` — the paper's 1%-risk
-  rule under a 4× FINRA day-trading leverage cap.
-- Stress-test costs: **$0.02/share** on entry, **+$0.04/share** when a stop is hit
-  (stops fire in the most volatile window of the day).
-- Take-profit at **+10R** is rarely reached — in practice this is an
-  *intraday momentum-continuation* strategy: hold the open's direction all day
-  with a 1R stop.
+**Sizing & costs** — position size = `min(1% equity / $R, 4 × equity / entry)`
+(1%-risk under a 4× FINRA day-trading cap). Stress-test costs: **$0.02/share**
+entry, **+$0.04/share** on a stop. The **+10R target is nearly decorative** — it is
+hit on only **~2–3%** of trades; **~75%** exit on the stop and **~22%** flat at the
+close. In practice this is *intraday momentum-continuation with a 1R stop*.
 
 ---
 
 ## 📊 Results
 
+| Scenario | Net PnL | Trades | PnL/share | t-stat | Sharpe | CAGR | Max DD |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| 📄 Paper replication (no slippage) | $138,639 | 1,775 | $0.070 | 1.79 | 1.06 | 30.4% | 22.4% |
+| 💸 With slippage | $4,860 | 1,775 | $0.020 | 0.52 | 0.23 | 2.7% | 43.9% |
+| 🔀 Slippage + **NQ 09:25 filter** | $43,246 | 836 | $0.127 | **2.07** | 0.76 | 15.3% | 31.1% |
+| 🧪 Slippage + QQQ 09:25 placebo | $25,191 | 825 | $0.079 | 1.27 | 0.57 | 10.5% | 27.2% |
+| 🧺 QQQ buy & hold | — | — | — | — | 0.72 | 15.3% | 35.6% |
+
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/metrics_dark.svg">
-  <img alt="Small-multiple bar charts comparing Sharpe ratio, CAGR, max drawdown and average PnL per share across the paper replication, the slippage scenario, the NQ-filtered strategy and QQQ buy and hold" src="assets/metrics_light.svg">
+  <img alt="Small-multiple bar charts comparing Sharpe, CAGR, max drawdown and PnL per share across the five scenarios" src="assets/metrics_light.svg">
 </picture>
 
-### Full scenario table
+---
 
-| Scenario | Net PnL | Trades | Avg shares | PnL / share | Sharpe | CAGR | Max DD | Vol |
-|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| 📄 Paper replication (no slippage) | $139,127 | 1,771 | 1,314 | $0.072 | 1.06 | 30.4% | 22.3% | 28.9% |
-| 💸 With slippage | $5,068 | 1,771 | 489 | $0.022 | 0.24 | 2.8% | 43.2% | 29.3% |
-| 🔀 Slippage + NQ 09:25 filter | $45,317 | 844 | 667 | $0.126 | 0.78 | 15.8% | 31.0% | 22.0% |
-| 🧺 QQQ buy & hold | — | — | — | — | 0.72 | 15.2% | 35.6% | 23.4% |
+## 🔬 What the data actually said
 
-**Reading the table**
+**1. The replication is exact.** Decoupling it from NQ data availability recovers
+**1,775 trades vs the paper's 1,795** and Sharpe 1.06 — the earlier 1,771-trade
+figure was an artifact of dropping bars where NQ was missing.
 
-1. The paper's headline numbers require >$300k notional per signal filled at
-   mid with zero impact — an assumption, not a market.
-2. Two cents of slippage turn a 30% CAGR into cash-drag territory and *worsen*
-   the drawdown profile beyond buy & hold.
-3. Conditioning on the 09:25 NQ bar (last 5 minutes of pre-open futures flow)
-   roughly halves the trade count, concentrates on better entries, and restores
-   risk-adjusted performance to ~buy-&-hold levels — **on the same sample the
-   filter was designed on** (see limitations 👇).
+**2. The NQ filter is more than a momentum proxy — my prior was wrong.** The
+control experiment replaces NQ with QQQ's *own* 09:25 pre-market bar (the placebo).
+If the filter were just two-bar momentum, the two would match. They don't: NQ
+delivers **$0.127/share (t = 2.07, significant at ~5%)** vs the placebo's
+**$0.079/share (t = 1.27, not significant)**. The cross-asset signal carries
+information beyond QQQ's own pre-open move.
+
+**3. …but the portfolio-level edge over buy & hold is *not* established.** The
+NQ-filter Sharpe (0.76) barely exceeds buy & hold (0.72), and their bootstrap 95%
+CIs overlap heavily (NQ filter **[0.04, 1.40]**, buy & hold **[−0.03, 1.47]**). A
+significant *per-trade* edge is not the same as a significant *strategy*.
+
+**4. The edge is a single-regime phenomenon.** This is the finding that would
+drive a prop risk review:
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/yearly_pnl_dark.svg">
+  <img alt="Per-year net PnL columns for the replication and the NQ-filtered strategy; 2022 dominates both, and the filter is negative in 2017, 2020 and 2023" src="assets/yearly_pnl_light.svg">
+</picture>
+
+**2022 alone is 76% of the filtered PnL** (and 38% of the replication). The filter
+loses money in 2017, 2020 and early 2023. Strip out the 2022 high-volatility bear
+market and there is little left — consistent with ORB edges being a
+volatility-regime effect, not a structural one. The sharp 2023 drawdown also hints
+the edge was already decaying at the end of the sample, which makes extending to
+2023–2026 the highest-value next test.
 
 ---
 
-## 🔬 Research pipeline
+## ⚠️ Limitations
 
-```mermaid
-flowchart LR
-    subgraph data ["🗃️ Data"]
-        Q["QQQ 5-min UTC"] --> AL["align to NY time,<br/>drop incomplete sessions"]
-        N["NQ 1-min CME"] -->|resample 5-min| AL
-    end
-    AL --> R["1️⃣ Paper replication"]
-    R --> S["2️⃣ + execution costs"]
-    S --> F["3️⃣ + NQ confirmation"]
-    F --> V["📐 Daily-equity metrics<br/>vs QQQ buy & hold"]
-```
-
----
-
-## ⚠️ Limitations & known issues (read before trusting any number)
-
-This section exists on purpose — a backtest without its caveats is marketing.
-
-- **In-sample filter selection.** The NQ confirmation was chosen after observing
-  that slippage kills the baseline, and evaluated on the same 2016–2023 window.
-  No out-of-sample split or walk-forward yet.
-- **No significance testing.** 844 filtered trades; the Sharpe gap vs buy & hold
-  (0.78 vs 0.72) is almost certainly not statistically significant. Per-trade
-  t-stats and bootstrap CIs are on the roadmap.
-- **The filter may not be "cross-asset" at all.** The 09:25 NQ bar ≈ QQQ's own
-  pre-market momentum. A placebo test with QQQ's 09:25 pre-market bar is the
-  obvious control experiment.
+- **In-sample filter selection.** The NQ filter was chosen and evaluated on the
+  same 2016–2023 window. The significance tests above are honest but in-sample; a
+  walk-forward or a true out-of-sample re-run is still owed.
 - **Stale sample.** Data ends Feb 2023. Post-2023 data is free out-of-sample
-  evidence and the highest-value next step.
-- **Cost model is a point estimate.** A PnL-vs-slippage sensitivity curve (and
-  volatility-scaled stop slippage for gap days) would be more honest than a
-  single $0.02 assumption.
-- **Data-alignment artifact.** Bars where NQ is missing are dropped from *all*
-  scenarios, so even the "paper replication" is conditioned on NQ availability
-  (1,771 trades vs the paper's 1,795).
-- **Source conflict of interest.** The original paper's authors run day-trading
-  education businesses; published ORB results are known to concentrate in the
-  high-volatility 2020–2022 regime.
-- Sharpe is computed without risk-free subtraction; buy & hold benchmark is
-  price-return (no dividends); commissions ($0.0005/share in the paper) are not
-  modelled — individually small, collectively worth fixing.
+  evidence and would directly test the 2023 decay signal.
+- **Cost model.** Stop slippage is a flat $0.04; gap/halt days deserve
+  volatility-scaled slippage. EoD exits are modelled as costless (defensible for a
+  QQQ MOC, but stated explicitly).
+- **Benchmark.** Buy & hold is price-return (no dividends, ~0.6%/yr); Sharpe is not
+  risk-free-adjusted (non-neutral over the 2016–2023 rate path).
+- **Source conflict of interest.** The original authors run day-trading education
+  businesses; published ORB results are known to concentrate in 2020–2022 — which
+  this replication independently confirms.
 
 ---
 
 ## 🗺️ Roadmap
 
-**Implemented — awaiting data to run** *(engine in [`src/backtest.py`](src/backtest.py), analyses in [`notebooks/QQQ_bias_v2.ipynb`](notebooks/QQQ_bias_v2.ipynb); engine smoke-tested on synthetic data, including deterministic accounting checks)*
+**Done** *(engine [`src/backtest.py`](src/backtest.py), analysis [`notebooks/QQQ_bias_v2.ipynb`](notebooks/QQQ_bias_v2.ipynb))*
 
-- [x] Refactor the three copy-pasted backtest loops into one parameterised engine
-- [x] Run the replication on unfiltered QQQ data (decouple it from NQ availability)
+- [x] Single parameterised engine (replaces three copy-pasted loops)
+- [x] Replication decoupled from NQ availability → exact 1,775-trade match
 - [x] Whole-day session filtering, DST-safe NQ timestamps, commission modelling
-- [x] Placebo test: QQQ 09:25 pre-market bar instead of NQ
-- [x] Per-trade t-stat, bootstrap CI on Sharpe, per-year PnL breakdown
-- [x] PnL-vs-slippage sensitivity curve
+- [x] Placebo test (QQQ 09:25 bar) — NQ filter shown to add information
+- [x] Per-trade t-stats, bootstrap Sharpe CIs, per-year breakdown
+- [x] PnL-vs-slippage sensitivity curve → break-even ≈ 2.2¢/share
 
 **Open**
 
-- [ ] Re-run everything on real data and update the results above (numbers in this README are still from the v1 notebook)
-- [ ] Extend the sample to 2023–2026 (true out-of-sample for both signal and filter)
+- [ ] Extend the sample to 2023–2026 (true out-of-sample; tests the 2023 decay)
+- [ ] Walk-forward / train–test split to de-bias the in-sample filter choice
 - [ ] Volatility-scaled stop slippage for gap days
-- [ ] Dividend-adjusted, risk-free-adjusted benchmark comparison
+- [ ] Dividend- and risk-free-adjusted benchmark
 
 ---
 
@@ -168,7 +171,7 @@ This section exists on purpose — a backtest without its caveats is marketing.
 │   └── ssrn-4416622.pdf     # the paper being replicated
 ├── 📓 notebooks/
 │   ├── QQQ_bias.ipynb       # v1 — original replication (kept for provenance)
-│   └── QQQ_bias_v2.ipynb    # v2 — refactored engine + placebo, t-stats, bootstrap, sensitivity
+│   └── QQQ_bias_v2.ipynb    # v2 — engine + placebo, t-stats, bootstrap, sensitivity
 ├── 🧩 src/
 │   └── backtest.py          # parameterised engine: data loaders, backtest, statistics
 └── 📦 requirements.txt
@@ -180,11 +183,8 @@ This section exists on purpose — a backtest without its caveats is marketing.
 python3 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 # drop the two CSVs into data/ (schema in data/README.md)
-jupyter lab notebooks/QQQ_bias.ipynb
+jupyter lab notebooks/QQQ_bias_v2.ipynb   # Run ▸ Run All Cells
 ```
-
-Run the notebook top-to-bottom; assertions flag timestamp misalignment between
-QQQ and NQ before any backtest runs.
 
 ---
 
@@ -192,5 +192,5 @@ QQQ and NQ before any backtest runs.
 
 Research artifact, not investment advice and not a production trading system.
 Historical results — especially intraday results net of *assumed* costs — do not
-guarantee future performance. Reconcile all data against a proprietary feed
-before committing capital.
+guarantee future performance. Reconcile all data against a proprietary feed before
+committing capital.

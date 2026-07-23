@@ -1,14 +1,17 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="830" height="230" viewBox="0 0 830 230" role="img">
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="250" viewBox="0 0 820 250" role="img">
 <text x="16" y="26" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15" fill="#ffffff" font-weight="700" text-anchor="start">Net PnL under execution stress</text>
-<text x="16" y="46" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="11.5" fill="#898781" font-weight="normal" text-anchor="start">Same signal, three cost assumptions — Jan 2016 to Feb 2023, $25k starting capital, USD</text>
-<text x="236" y="84.0" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12.5" fill="#c3c2b7" font-weight="normal" text-anchor="end">Paper replication (no slippage)</text>
-<path d="M246,70 h466.0 a4,4 0 0 1 4,4 v12 a4,4 0 0 1 -4,4 h-466.0 z" fill="#45443f"/>
-<text x="724.0" y="84.0" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="13" fill="#ffffff" font-weight="700" text-anchor="start">$139,127</text>
-<text x="236" y="130.0" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12.5" fill="#c3c2b7" font-weight="normal" text-anchor="end">With $0.02/share slippage</text>
-<path d="M246,116 h13.120760168766665 a4,4 0 0 1 4,4 v12 a4,4 0 0 1 -4,4 h-13.120760168766665 z" fill="#45443f"/>
-<text x="271.12076016876665" y="130.0" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="13" fill="#ffffff" font-weight="700" text-anchor="start">$5,068</text>
-<text x="236" y="176.0" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12.5" fill="#c3c2b7" font-weight="normal" text-anchor="end">Slippage + NQ 09:25 filter</text>
-<path d="M246,162 h149.09027004104163 a4,4 0 0 1 4,4 v12 a4,4 0 0 1 -4,4 h-149.09027004104163 z" fill="#3987e5"/>
-<text x="407.09027004104166" y="176.0" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="13" fill="#ffffff" font-weight="700" text-anchor="start">$45,317</text>
-<line x1="246" y1="62" x2="246" y2="196" stroke="#383835" stroke-width="1"/>
+<text x="16" y="46" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="11.5" fill="#898781" font-weight="normal" text-anchor="start">Same signal, escalating cost realism — Jan 2016 to Feb 2023, $25k start, USD</text>
+<text x="256" y="84.0" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12.5" fill="#c3c2b7" font-weight="normal" text-anchor="end">Paper replication (no slippage)</text>
+<path d="M266,70 h426.0 a4,4 0 0 1 4,4 v12 a4,4 0 0 1 -4,4 h-426.0 z" fill="#45443f"/>
+<text x="704.0" y="84.0" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="13" fill="#ffffff" font-weight="700" text-anchor="start">$138,639</text>
+<text x="256" y="128.0" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12.5" fill="#c3c2b7" font-weight="normal" text-anchor="end">With $0.02/share slippage</text>
+<path d="M266,114 h11.073680566074481 a4,4 0 0 1 4,4 v12 a4,4 0 0 1 -4,4 h-11.073680566074481 z" fill="#45443f"/>
+<text x="289.0736805660745" y="128.0" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="13" fill="#ffffff" font-weight="700" text-anchor="start">$4,860</text>
+<text x="256" y="172.0" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12.5" fill="#c3c2b7" font-weight="normal" text-anchor="end">Slippage + NQ 09:25 filter</text>
+<path d="M266,158 h130.13094439515575 a4,4 0 0 1 4,4 v12 a4,4 0 0 1 -4,4 h-130.13094439515575 z" fill="#3987e5"/>
+<text x="408.1309443951558" y="172.0" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="13" fill="#ffffff" font-weight="700" text-anchor="start">$43,246</text>
+<text x="256" y="216.0" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12.5" fill="#c3c2b7" font-weight="normal" text-anchor="end">Slippage + QQQ 09:25 placebo</text>
+<path d="M266,202 h74.13191093415273 a4,4 0 0 1 4,4 v12 a4,4 0 0 1 -4,4 h-74.13191093415273 z" fill="#45443f"/>
+<text x="352.13191093415276" y="216.0" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="13" fill="#ffffff" font-weight="700" text-anchor="start">$25,191</text>
+<line x1="266" y1="62" x2="266" y2="230" stroke="#383835" stroke-width="1"/>
 </svg>
