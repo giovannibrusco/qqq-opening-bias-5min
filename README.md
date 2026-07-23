@@ -25,6 +25,20 @@ followed by three questions the paper never asks:
 | ⚠️ **But it's fragile** | **76%** of the filtered PnL is 2022 alone; the filter loses money in 2017, 2020 and early 2023 |
 
 <picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/equity_dark.svg">
+  <img alt="Equity curves on a log scale, 2016-2023: the paper's no-cost replication reaches $164k (6.5x); the NQ-filtered strategy after slippage ends at $68k (2.7x), neck-and-neck with QQQ buy & hold at $69k (2.7x); slippage-only lags at $30k" src="assets/equity_light.svg">
+</picture>
+
+*One picture, the whole thesis: the realistic strategy (blue) tracks buy & hold
+almost exactly, while the paper's cost-free curve (gray, top) floats far above
+anything achievable. Shaded bands mark the 2020 COVID crash and the 2022 selloff —
+where most of the active edge is actually made.*
+
+---
+
+## 📉 The cost ladder
+
+<picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/pnl_stress_dark.svg">
   <img alt="Net PnL under execution stress: paper replication $138,639; with $0.02/share slippage $4,860; slippage plus NQ 09:25 filter $43,246; slippage plus QQQ 09:25 placebo $25,191" src="assets/pnl_stress_light.svg">
 </picture>
