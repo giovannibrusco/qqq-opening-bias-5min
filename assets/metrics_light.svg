@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="930" height="570" viewBox="0 0 930 570" role="img">
+<text x="16" y="26" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15" fill="#0b0b0b" font-weight="700" text-anchor="start">Risk-adjusted comparison across scenarios</text>
+<text x="16" y="46" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="11.5" fill="#898781" font-weight="normal" text-anchor="start">Daily-equity metrics, 2016–2023 — highlighted: slippage-aware strategy with NQ confirmation</text>
+<text x="16" y="84" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="13.5" fill="#0b0b0b" font-weight="600" text-anchor="start">Sharpe ratio</text>
+<text x="216" y="112.0" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" fill="#52514e" font-weight="normal" text-anchor="end">Paper replication (no slippage)</text>
+<path d="M226,98 h116.0 a4,4 0 0 1 4,4 v12 a4,4 0 0 1 -4,4 h-116.0 z" fill="#c9c8c1"/>
+<text x="354.0" y="112.0" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12.5" fill="#0b0b0b" font-weight="600" text-anchor="start">1.06</text>
+<text x="216" y="152.0" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" fill="#52514e" font-weight="normal" text-anchor="end">With $0.02/share slippage</text>
+<path d="M226,138 h22.037735849056606 a4,4 0 0 1 4,4 v12 a4,4 0 0 1 -4,4 h-22.037735849056606 z" fill="#c9c8c1"/>
+<text x="260.0377358490566" y="152.0" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12.5" fill="#0b0b0b" font-weight="600" text-anchor="start">0.23</text>
+<text x="216" y="192.0" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" fill="#52514e" font-weight="normal" text-anchor="end">Slippage + NQ 09:25 filter</text>
+<path d="M226,178 h82.0377358490566 a4,4 0 0 1 4,4 v12 a4,4 0 0 1 -4,4 h-82.0377358490566 z" fill="#2a78d6"/>
+<text x="320.0377358490566" y="192.0" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12.5" fill="#0b0b0b" font-weight="600" text-anchor="start">0.76</text>
+<text x="216" y="232.0" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" fill="#52514e" font-weight="normal" text-anchor="end">Slippage + QQQ 09:25 placebo</text>
+<path d="M226,218 h60.528301886792434 a4,4 0 0 1 4,4 v12 a4,4 0 0 1 -4,4 h-60.528301886792434 z" fill="#c9c8c1"/>
+<text x="298.5283018867924" y="232.0" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12.5" fill="#0b0b0b" font-weight="600" text-anchor="start">0.57</text>
+<text x="216" y="272.0" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" fill="#52514e" font-weight="normal" text-anchor="end">QQQ buy &amp; hold</text>
+<path d="M226,258 h77.50943396226414 a4,4 0 0 1 4,4 v12 a4,4 0 0 1 -4,4 h-77.50943396226414 z" fill="#c9c8c1"/>
+<text x="315.50943396226415" y="272.0" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12.5" fill="#0b0b0b" font-weight="600" text-anchor="start">0.72</text>
+<line x1="226" y1="92" x2="226" y2="280" stroke="#c3c2b7" stroke-width="1"/>
+<text x="476" y="84" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="13.5" fill="#0b0b0b" font-weight="600" text-anchor="start">CAGR</text>
+<text x="676" y="112.0" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" fill="#52514e" font-weight="normal" text-anchor="end">Paper replication (no slippage)</text>
+<path d="M686,98 h116.0 a4,4 0 0 1 4,4 v12 a4,4 0 0 1 -4,4 h-116.0 z" fill="#c9c8c1"/>
+<text x="814.0" y="112.0" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12.5" fill="#0b0b0b" font-weight="600" text-anchor="start">30.4%</text>
+<text x="676" y="152.0" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" fill="#52514e" font-weight="normal" text-anchor="end">With $0.02/share slippage</text>
+<path d="M686,138 h6.657894736842106 a4,4 0 0 1 4,4 v12 a4,4 0 0 1 -4,4 h-6.657894736842106 z" fill="#c9c8c1"/>
+<text x="704.6578947368421" y="152.0" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12.5" fill="#0b0b0b" font-weight="600" text-anchor="start">2.7%</text>
+<text x="676" y="192.0" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" fill="#52514e" font-weight="normal" text-anchor="end">Slippage + NQ 09:25 filter</text>
+<path d="M686,178 h56.394736842105274 a4,4 0 0 1 4,4 v12 a4,4 0 0 1 -4,4 h-56.394736842105274 z" fill="#2a78d6"/>
+<text x="754.3947368421053" y="192.0" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12.5" fill="#0b0b0b" font-weight="600" text-anchor="start">15.3%</text>
+<text x="676" y="232.0" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" fill="#52514e" font-weight="normal" text-anchor="end">Slippage + QQQ 09:25 placebo</text>
+<path d="M686,218 h37.44736842105263 a4,4 0 0 1 4,4 v12 a4,4 0 0 1 -4,4 h-37.44736842105263 z" fill="#c9c8c1"/>
+<text x="735.4473684210526" y="232.0" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12.5" fill="#0b0b0b" font-weight="600" text-anchor="start">10.5%</text>
+<text x="676" y="272.0" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" fill="#52514e" font-weight="normal" text-anchor="end">QQQ buy &amp; hold</text>
+<path d="M686,258 h56.394736842105274 a4,4 0 0 1 4,4 v12 a4,4 0 0 1 -4,4 h-56.394736842105274 z" fill="#c9c8c1"/>
+<text x="754.3947368421053" y="272.0" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12.5" fill="#0b0b0b" font-weight="600" text-anchor="start">15.3%</text>
+<line x1="686" y1="92" x2="686" y2="280" stroke="#c3c2b7" stroke-width="1"/>
+<text x="16" y="334" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="13.5" fill="#0b0b0b" font-weight="600" text-anchor="start">Max drawdown</text>
+<text x="16" y="350" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="11" fill="#898781" font-weight="normal" text-anchor="start">lower is better</text>
+<text x="216" y="376.0" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" fill="#52514e" font-weight="normal" text-anchor="end">Paper replication (no slippage)</text>
+<path d="M226,362 h57.230068337129836 a4,4 0 0 1 4,4 v12 a4,4 0 0 1 -4,4 h-57.230068337129836 z" fill="#c9c8c1"/>
+<text x="295.23006833712986" y="376.0" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12.5" fill="#0b0b0b" font-weight="600" text-anchor="start">22.4%</text>
+<text x="216" y="416.0" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" fill="#52514e" font-weight="normal" text-anchor="end">With $0.02/share slippage</text>
+<path d="M226,402 h116.0 a4,4 0 0 1 4,4 v12 a4,4 0 0 1 -4,4 h-116.0 z" fill="#c9c8c1"/>
+<text x="354.0" y="416.0" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12.5" fill="#0b0b0b" font-weight="600" text-anchor="start">43.9%</text>
+<text x="216" y="456.0" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" fill="#52514e" font-weight="normal" text-anchor="end">Slippage + NQ 09:25 filter</text>
+<path d="M226,442 h81.0113895216401 a4,4 0 0 1 4,4 v12 a4,4 0 0 1 -4,4 h-81.0113895216401 z" fill="#2a78d6"/>
+<text x="319.0113895216401" y="456.0" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12.5" fill="#0b0b0b" font-weight="600" text-anchor="start">31.1%</text>
+<text x="216" y="496.0" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" fill="#52514e" font-weight="normal" text-anchor="end">Slippage + QQQ 09:25 placebo</text>
+<path d="M226,482 h70.35079726651482 a4,4 0 0 1 4,4 v12 a4,4 0 0 1 -4,4 h-70.35079726651482 z" fill="#c9c8c1"/>
+<text x="308.3507972665148" y="496.0" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12.5" fill="#0b0b0b" font-weight="600" text-anchor="start">27.2%</text>
+<text x="216" y="536.0" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" fill="#52514e" font-weight="normal" text-anchor="end">QQQ buy &amp; hold</text>
+<path d="M226,522 h93.3120728929385 a4,4 0 0 1 4,4 v12 a4,4 0 0 1 -4,4 h-93.3120728929385 z" fill="#c9c8c1"/>
+<text x="331.3120728929385" y="536.0" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12.5" fill="#0b0b0b" font-weight="600" text-anchor="start">35.6%</text>
+<line x1="226" y1="356" x2="226" y2="544" stroke="#c3c2b7" stroke-width="1"/>
+<text x="476" y="334" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="13.5" fill="#0b0b0b" font-weight="600" text-anchor="start">Avg PnL per share</text>
+<text x="676" y="362.0" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" fill="#52514e" font-weight="normal" text-anchor="end">Paper replication (no slippage)</text>
+<path d="M686,348 h62.14173228346456 a4,4 0 0 1 4,4 v12 a4,4 0 0 1 -4,4 h-62.14173228346456 z" fill="#c9c8c1"/>
+<text x="760.1417322834645" y="362.0" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12.5" fill="#0b0b0b" font-weight="600" text-anchor="start">$0.070</text>
+<text x="676" y="402.0" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" fill="#52514e" font-weight="normal" text-anchor="end">With $0.02/share slippage</text>
+<path d="M686,388 h14.897637795275589 a4,4 0 0 1 4,4 v12 a4,4 0 0 1 -4,4 h-14.897637795275589 z" fill="#c9c8c1"/>
+<text x="712.8976377952756" y="402.0" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12.5" fill="#0b0b0b" font-weight="600" text-anchor="start">$0.020</text>
+<text x="676" y="442.0" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" fill="#52514e" font-weight="normal" text-anchor="end">Slippage + NQ 09:25 filter</text>
+<path d="M686,428 h116.0 a4,4 0 0 1 4,4 v12 a4,4 0 0 1 -4,4 h-116.0 z" fill="#2a78d6"/>
+<text x="814.0" y="442.0" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12.5" fill="#0b0b0b" font-weight="600" text-anchor="start">$0.127</text>
+<text x="676" y="482.0" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" fill="#52514e" font-weight="normal" text-anchor="end">Slippage + QQQ 09:25 placebo</text>
+<path d="M686,468 h70.64566929133858 a4,4 0 0 1 4,4 v12 a4,4 0 0 1 -4,4 h-70.64566929133858 z" fill="#c9c8c1"/>
+<text x="768.6456692913385" y="482.0" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12.5" fill="#0b0b0b" font-weight="600" text-anchor="start">$0.079</text>
+<line x1="686" y1="342" x2="686" y2="490" stroke="#c3c2b7" stroke-width="1"/>
+</svg>

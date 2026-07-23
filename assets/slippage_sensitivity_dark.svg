@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="430" viewBox="0 0 820 430" role="img">
+<text x="16" y="26" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15" fill="#ffffff" font-weight="700" text-anchor="start">Edge vs execution cost</text>
+<text x="16" y="46" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="11.5" fill="#898781" font-weight="normal" text-anchor="start">Net PnL as entry slippage sweeps 0–5¢/share (stop slippage = 2×) — break-even near 2.2¢</text>
+<line x1="90" y1="370.0" x2="780" y2="370.0" stroke="#2c2c2a" stroke-width="1"/>
+<text x="80" y="374.0" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="11" fill="#898781" font-weight="normal" text-anchor="end">$-30k</text>
+<line x1="90" y1="321.3" x2="780" y2="321.3" stroke="#2c2c2a" stroke-width="1"/>
+<text x="80" y="325.33333333333337" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="11" fill="#898781" font-weight="normal" text-anchor="end">$0k</text>
+<line x1="90" y1="272.7" x2="780" y2="272.7" stroke="#2c2c2a" stroke-width="1"/>
+<text x="80" y="276.66666666666663" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="11" fill="#898781" font-weight="normal" text-anchor="end">$30k</text>
+<line x1="90" y1="224.0" x2="780" y2="224.0" stroke="#2c2c2a" stroke-width="1"/>
+<text x="80" y="228.0" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="11" fill="#898781" font-weight="normal" text-anchor="end">$60k</text>
+<line x1="90" y1="175.3" x2="780" y2="175.3" stroke="#2c2c2a" stroke-width="1"/>
+<text x="80" y="179.33333333333331" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="11" fill="#898781" font-weight="normal" text-anchor="end">$90k</text>
+<line x1="90" y1="126.7" x2="780" y2="126.7" stroke="#2c2c2a" stroke-width="1"/>
+<text x="80" y="130.66666666666666" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="11" fill="#898781" font-weight="normal" text-anchor="end">$120k</text>
+<line x1="90" y1="78.0" x2="780" y2="78.0" stroke="#2c2c2a" stroke-width="1"/>
+<text x="80" y="82.0" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="11" fill="#898781" font-weight="normal" text-anchor="end">$150k</text>
+<line x1="90" y1="321.3" x2="780" y2="321.3" stroke="#383835" stroke-width="1.5"/>
+<text x="90.0" y="392" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="11" fill="#898781" font-weight="normal" text-anchor="middle">0¢</text>
+<text x="228.0" y="392" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="11" fill="#898781" font-weight="normal" text-anchor="middle">1¢</text>
+<text x="366.0" y="392" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="11" fill="#898781" font-weight="normal" text-anchor="middle">2¢</text>
+<text x="504.0" y="392" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="11" fill="#898781" font-weight="normal" text-anchor="middle">3¢</text>
+<text x="642.0" y="392" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="11" fill="#898781" font-weight="normal" text-anchor="middle">4¢</text>
+<text x="780.0" y="392" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="11" fill="#898781" font-weight="normal" text-anchor="middle">5¢</text>
+<text x="435.0" y="418" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="11.5" fill="#c3c2b7" font-weight="normal" text-anchor="middle">entry slippage (¢ / share)</text>
+<line x1="399.1" y1="78" x2="399.1" y2="370" stroke="#d03b3b" stroke-width="1" stroke-dasharray="4 3"/>
+<text x="405.11999999999995" y="92" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="11" fill="#d03b3b" font-weight="600" text-anchor="start">break-even ≈ 2.2¢</text>
+<polyline points="90.0,96.4 159.0,188.3 228.0,248.5 297.0,287.7 366.0,313.4 435.0,330.2 504.0,341.1 573.0,348.4 642.0,353.0 711.0,356.1 780.0,358.1" fill="none" stroke="#3987e5" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="90.0" cy="96.4" r="4" fill="#0ca30c" stroke="#1a1a19" stroke-width="2"/>
+<circle cx="159.0" cy="188.3" r="4" fill="#0ca30c" stroke="#1a1a19" stroke-width="2"/>
+<circle cx="228.0" cy="248.5" r="4" fill="#0ca30c" stroke="#1a1a19" stroke-width="2"/>
+<circle cx="297.0" cy="287.7" r="4" fill="#0ca30c" stroke="#1a1a19" stroke-width="2"/>
+<circle cx="366.0" cy="313.4" r="4" fill="#0ca30c" stroke="#1a1a19" stroke-width="2"/>
+<circle cx="435.0" cy="330.2" r="4" fill="#d03b3b" stroke="#1a1a19" stroke-width="2"/>
+<circle cx="504.0" cy="341.1" r="4" fill="#d03b3b" stroke="#1a1a19" stroke-width="2"/>
+<circle cx="573.0" cy="348.4" r="4" fill="#d03b3b" stroke="#1a1a19" stroke-width="2"/>
+<circle cx="642.0" cy="353.0" r="4" fill="#d03b3b" stroke="#1a1a19" stroke-width="2"/>
+<circle cx="711.0" cy="356.1" r="4" fill="#d03b3b" stroke="#1a1a19" stroke-width="2"/>
+<circle cx="780.0" cy="358.1" r="4" fill="#d03b3b" stroke="#1a1a19" stroke-width="2"/>
+<text x="98.0" y="100.43006666666668" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" fill="#ffffff" font-weight="700" text-anchor="start">$138,639</text>
+<text x="776.0" y="376.0847777777778" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" fill="#ffffff" font-weight="700" text-anchor="end">−$22,655</text>
+</svg>

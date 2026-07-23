@@ -1,15 +1,21 @@
-.venv/
+# Data (local only — see data/README.md)
+data/*.csv
+data/*.parquet
+
+# Python
 __pycache__/
 *.py[cod]
+.venv/
+venv/
+build/
+dist/
 *.egg-info/
 .pytest_cache/
+
+# Jupyter
 .ipynb_checkpoints/
+
+# OS / editors
 .DS_Store
-
-# Private or licensed market data
-Data/
-data/*
-!data/README.md
-
-# Generated artifacts
-results/
+.vscode/
+.idea/

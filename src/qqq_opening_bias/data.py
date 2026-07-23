@@ -57,11 +57,17 @@ def load_nq_bars(
         raw["Date"].astype(str) + " " + raw["Time"].astype(str),
         format="%d/%m/%Y %H:%M:%S",
     )
+    # DST-safe localisation: ambiguous (fall-back) and nonexistent (spring-forward)
+    # wall-clock stamps become NaT and are dropped rather than raising or being
+    # silently shifted.
     raw["date"] = (
-        timestamps.dt.tz_localize("America/Chicago")
+        timestamps.dt.tz_localize(
+            "America/Chicago", ambiguous="NaT", nonexistent="NaT"
+        )
         .dt.tz_convert("America/New_York")
         .dt.tz_localize(None)
     )
+    raw = raw.dropna(subset=["date"])
 
     bars = (
         raw.sort_values("date")

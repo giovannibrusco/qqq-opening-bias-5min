@@ -1,53 +1,35 @@
-# Data requirements
+# 📁 Data directory
 
-The historical files used in the original research are not included because
-market-data redistribution rights depend on the user's vendor agreement.
+The raw market data is **not versioned** (see `.gitignore`). Place the two CSV
+files below in this folder before running the notebook.
 
-## QQQ input
+## Expected files
 
-The original notebook expects:
+### `QQQ_5min_10years_UTC.csv`
+QQQ 5-minute OHLCV bars, timestamps in **UTC**, bar-open labelled.
 
-```text
-Data/QQQ_5min_10years_UTC.csv
-```
+| column | type | notes |
+|---|---|---|
+| `date` | ISO datetime (UTC) | converted to `America/New_York` in the notebook |
+| `open`, `high`, `low`, `close` | float | regular + pre-market session |
+| `volume` | int | |
 
-Required columns:
+### `nq-10y-1min.csv`
+CME NQ futures 1-minute bars (continuous front contract), timestamps in
+**America/Chicago** exchange time, resampled to 5-minute bars inside the notebook.
 
-```text
-date, open, high, low, close
-```
+| column | type | notes |
+|---|---|---|
+| `Date` | `dd/mm/yyyy` | |
+| `Time` | `HH:MM:SS` | assumed bar-open labelled, Chicago time |
+| `Open`, `High`, `Low`, `Close` | float | |
+| `TotalVolume` | int | |
 
-The `date` field must contain UTC timestamps. The preprocessing code converts
-them to `America/New_York` and retains bars from 09:25 through 15:55 ET.
-Additional columns are allowed and ignored by the reusable engine.
+## ⚠️ Integrity checks worth running before any backtest
 
-## NQ input
-
-The original notebook expects:
-
-```text
-Data/nq-10y-1min.csv
-```
-
-Required columns:
-
-```text
-Date, Time, Open, High, Low, Close, TotalVolume
-```
-
-The source timestamps are interpreted as `America/Chicago`. The data is
-converted to `America/New_York`, resampled from 1-minute to 5-minute OHLCV bars
-and aligned to the QQQ timestamps.
-
-## Reproducibility boundary
-
-The repository provides:
-
-- preprocessing code;
-- a reusable backtest engine;
-- synthetic unit tests;
-- stored outputs from the original executed notebook;
-- exact strategy and cost assumptions.
-
-A bit-for-bit rerun of the historical results additionally requires the same
-underlying data files and vendor revisions.
+- Confirm the vendor's **bar-labelling convention** (bar-open vs bar-close): a
+  close-labelled feed shifts every session bar by one slot and silently changes
+  the signal definition.
+- Confirm the NQ timestamps are truly exchange (Chicago) time and handle DST
+  transitions explicitly (`tz_localize(..., ambiguous=..., nonexistent=...)`).
+- Verify the first regular-session QQQ bar of each day is exactly `09:30`.
