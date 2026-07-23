@@ -25,8 +25,8 @@ followed by three questions the paper never asks:
 | ⚠️ **But it's fragile** | **76%** of the filtered PnL is 2022 alone; the filter loses money in 2017, 2020 and early 2023 |
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/equity_dark.svg">
-  <img alt="Equity curves on a log scale, 2016-2023: the paper's no-cost replication reaches $164k (6.5x); the NQ-filtered strategy after slippage ends at $68k (2.7x), neck-and-neck with QQQ buy & hold at $69k (2.7x); slippage-only lags at $30k" src="assets/equity_light.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/equity_dark.png">
+  <img alt="Equity curves on a log scale, 2016-2023: the paper's no-cost replication reaches $164k (6.5x); the NQ-filtered strategy after slippage ends at $68k (2.7x), neck-and-neck with QQQ buy & hold at $69k (2.7x); slippage-only lags at $30k" src="assets/equity_light.png">
 </picture>
 
 *One picture, the whole thesis: the realistic strategy (blue) tracks buy & hold
@@ -39,8 +39,8 @@ where most of the active edge is actually made.*
 ## 📉 The cost ladder
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/pnl_stress_dark.svg">
-  <img alt="Net PnL under execution stress: paper replication $138,639; with $0.02/share slippage $4,860; slippage plus NQ 09:25 filter $43,246; slippage plus QQQ 09:25 placebo $25,191" src="assets/pnl_stress_light.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/pnl_stress_dark.png">
+  <img alt="Net PnL under execution stress: paper replication $138,639; with $0.02/share slippage $4,860; slippage plus NQ 09:25 filter $43,246; slippage plus QQQ 09:25 placebo $25,191" src="assets/pnl_stress_light.png">
 </picture>
 
 ---
@@ -48,8 +48,8 @@ where most of the active edge is actually made.*
 ## 🔑 The headline chart: the edge is inside the spread
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/slippage_sensitivity_dark.svg">
-  <img alt="Line chart of net PnL as entry slippage sweeps from 0 to 5 cents per share; PnL falls from $138,639 to negative, crossing zero at about 2.2 cents" src="assets/slippage_sensitivity_light.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/slippage_sensitivity_dark.png">
+  <img alt="Line chart of net PnL as entry slippage sweeps from 0 to 5 cents per share; PnL falls from $138,639 to negative, crossing zero at about 2.2 cents" src="assets/slippage_sensitivity_light.png">
 </picture>
 
 The published $138,639 assumes **zero slippage**. Sweep entry slippage from 0 to
@@ -96,8 +96,8 @@ close. In practice this is *intraday momentum-continuation with a 1R stop*.
 | 🧺 QQQ buy & hold | — | — | — | — | 0.72 | 15.3% | 35.6% |
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/metrics_dark.svg">
-  <img alt="Small-multiple bar charts comparing Sharpe, CAGR, max drawdown and PnL per share across the five scenarios" src="assets/metrics_light.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/metrics_dark.png">
+  <img alt="Small-multiple bar charts comparing Sharpe, CAGR, max drawdown and PnL per share across the five scenarios" src="assets/metrics_light.png">
 </picture>
 
 ---
@@ -124,8 +124,8 @@ significant *per-trade* edge is not the same as a significant *strategy*.
 drive a prop risk review:
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/yearly_pnl_dark.svg">
-  <img alt="Per-year net PnL columns for the replication and the NQ-filtered strategy; 2022 dominates both, and the filter is negative in 2017, 2020 and 2023" src="assets/yearly_pnl_light.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/yearly_pnl_dark.png">
+  <img alt="Per-year net PnL columns for the replication and the NQ-filtered strategy; 2022 dominates both, and the filter is negative in 2017, 2020 and 2023" src="assets/yearly_pnl_light.png">
 </picture>
 
 **2022 alone is 76% of the filtered PnL** (and 38% of the replication). The filter
