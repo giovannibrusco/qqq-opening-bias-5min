@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "qqq-opening-bias"
+version = "0.1.0"
+description = "Replication and execution-cost sensitivity study of a QQQ opening-bias strategy"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [
+  { name = "Giovanni Brusco" }
+]
+dependencies = [
+  "numpy>=1.25,<3",
+  "pandas>=2.0,<3",
+  "matplotlib>=3.7,<4",
+  "tqdm>=4.65,<5"
+]
+
+[project.urls]
+Repository = "https://github.com/giovannibrusco/qqq-opening-bias-5min"
+Paper = "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4416622"
+
+[tool.setuptools.packages.find]
+where = ["src"]
