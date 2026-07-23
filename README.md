@@ -6,7 +6,7 @@
 [![Status](https://img.shields.io/badge/status-research%20artifact-8A2BE2)]()
 
 Independent replication of the **5-minute Opening Range Breakout on QQQ** from
-[*Can Day Trading Really Be Profitable?* (Zarattini & Aziz, SSRN 4416622)](docs/ssrn-4416622.pdf) —
+[*Can Day Trading Really Be Profitable?* (Zarattini & Aziz, SSRN 4416622)](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4416622) —
 followed by three questions the paper never asks:
 
 > **1. Does the edge survive realistic execution costs?** → *Barely — break-even at ~2.2¢/share.*
@@ -157,10 +157,10 @@ the edge was already decaying at the end of the sample, which makes extending to
 
 ## 🗺️ Roadmap
 
-**Done** *(engine [`src/backtest.py`](src/backtest.py), analysis [`notebooks/QQQ_bias_v2.ipynb`](notebooks/QQQ_bias_v2.ipynb))*
+**Done** *(tested package [`src/qqq_opening_bias/`](src/qqq_opening_bias), runner [`scripts/run_analysis.py`](scripts/run_analysis.py), notebook [`notebooks/QQQ_bias_v2.ipynb`](notebooks/QQQ_bias_v2.ipynb))*
 
-- [x] Single parameterised engine (replaces three copy-pasted loops)
-- [x] Replication decoupled from NQ availability → exact 1,775-trade match
+- [x] Event-driven engine with a unit-test suite (`tests/`)
+- [x] Replication decoupled from NQ availability → paper-matching trade count
 - [x] Whole-day session filtering, DST-safe NQ timestamps, commission modelling
 - [x] Placebo test (QQQ 09:25 bar) — NQ filter shown to add information
 - [x] Per-trade t-stats, bootstrap Sharpe CIs, per-year breakdown
@@ -178,16 +178,22 @@ the edge was already decaying at the end of the sample, which makes extending to
 ## 📂 Repository structure
 
 ```
-├── 📄 README.md
-├── 🖼️ assets/               # README charts (light + dark variants)
-├── 🗃️ data/                 # place CSVs here — not versioned, see data/README.md
-├── 📚 docs/
-│   └── ssrn-4416622.pdf     # the paper being replicated
+├── 📄 README.md · LICENSE · NOTICE.md · pyproject.toml
+├── 🖼️ assets/                        # README charts (light + dark) + equity_curves.csv
+├── 🗃️ data/                          # place CSVs here — not versioned, see data/README.md
+├── 📚 docs/images/                   # standalone figures
 ├── 📓 notebooks/
-│   ├── QQQ_bias.ipynb       # v1 — original replication (kept for provenance)
-│   └── QQQ_bias_v2.ipynb    # v2 — engine + placebo, t-stats, bootstrap, sensitivity
-├── 🧩 src/
-│   └── backtest.py          # parameterised engine: data loaders, backtest, statistics
+│   ├── QQQ_bias.ipynb                # v1 — original replication (kept for provenance)
+│   └── QQQ_bias_v2.ipynb             # v2 — narrative analysis on the package
+├── 🧩 src/qqq_opening_bias/
+│   ├── data.py                       # loaders + DST-safe NQ alignment
+│   ├── backtest.py                   # event-driven engine (BacktestConfig / run_backtest)
+│   ├── metrics.py                    # Sharpe / CAGR / drawdown / volatility
+│   └── analysis.py                   # placebo, t-stat, bootstrap, per-year, sensitivity
+├── 🧪 tests/                         # unit tests for the engine and the analysis
+├── ⚙️ scripts/
+│   ├── run_analysis.py               # reproduce every scenario + statistic from the CSVs
+│   └── export_equity.py             # dump daily equity curves for the hero chart
 └── 📦 requirements.txt
 ```
 
@@ -195,10 +201,18 @@ the edge was already decaying at the end of the sample, which makes extending to
 
 ```bash
 python3 -m venv .venv && source .venv/bin/activate
-pip install -r requirements.txt
-# drop the two CSVs into data/ (schema in data/README.md)
+pip install -e .                      # installs the qqq_opening_bias package
+python -m pytest                      # run the test suite (no data needed)
+
+# drop the two CSVs into data/ (schema in data/README.md), then reproduce everything:
+python scripts/run_analysis.py --qqq data/QQQ_5min_10years_UTC.csv --nq data/nq-10y-1min.csv
+
+# or explore interactively:
 jupyter lab notebooks/QQQ_bias_v2.ipynb   # Run ▸ Run All Cells
 ```
+
+*Headline figures in this README come from `scripts/run_analysis.py` on the full
+2016–2023 sample; a fresh run may differ by rounding.*
 
 ---
 
