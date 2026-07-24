@@ -26,7 +26,7 @@ followed by three questions the paper never asks:
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/equity_dark.png">
-  <img alt="Equity curves on a log scale, 2016-2023: the paper's no-cost replication reaches $164k (6.5x); the NQ-filtered strategy after slippage ends at $68k (2.7x), neck-and-neck with QQQ buy & hold at $69k (2.7x); slippage-only lags at $30k" src="assets/equity_light.png">
+  <img alt="Equity curves on a log scale, 2016-2023: the paper's no-cost replication reaches $164k (6.5x); the NQ-filtered strategy after slippage ends at $69k (2.8x), neck-and-neck with QQQ buy & hold at $69k (2.7x); slippage-only lags at $30k" src="assets/equity_light.png">
 </picture>
 
 *One picture, the whole thesis: the realistic strategy (blue) tracks buy & hold
