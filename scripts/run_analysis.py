@@ -110,7 +110,11 @@ def main() -> None:
         print(yearly_breakdown(results["Slippage + NQ 09:25 filter"]).round(3))
 
         print("\n=== Slippage sensitivity (replication) ===")
-        print(slippage_sensitivity(qqq).round(4).to_string(index=False))
+        print(
+            slippage_sensitivity(qqq, base_config=BacktestConfig(**BASE))
+            .round(4)
+            .to_string(index=False)
+        )
 
         print("\n=== Exit-reason mix ===")
         mix = {

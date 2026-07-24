@@ -21,7 +21,7 @@ followed by three questions the paper never asks:
 |---|---|
 | 🎯 **Replication** | Reproduced within noise — **1,775 trades** (paper: 1,795), Sharpe **1.06** (paper: 1.12) |
 | 💸 **Execution kills it** | Gross edge **$0.070/share**; net PnL crosses **zero at ~2.2¢/share** of slippage — the edge lives *inside* the bid-ask spread |
-| 🔀 **NQ filter helps, and it's real** | Requiring the 09:25 NQ bar to agree lifts edge to **$0.127/share**, per-trade **t-stat 2.07** (significant); the QQQ-own placebo does not clear significance |
+| 🔀 **NQ filter helps, and it's real** | Requiring the 09:25 NQ bar to agree lifts edge to **$0.125/share**, per-trade **t-stat 2.05** (significant); the QQQ-own placebo does not clear significance |
 | ⚠️ **But it's fragile** | **76%** of the filtered PnL is 2022 alone; the filter loses money in 2017, 2020 and early 2023 |
 
 <picture>
@@ -40,7 +40,7 @@ where most of the active edge is actually made.*
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/pnl_stress_dark.png">
-  <img alt="Net PnL under execution stress: paper replication $138,639; with $0.02/share slippage $4,860; slippage plus NQ 09:25 filter $43,246; slippage plus QQQ 09:25 placebo $25,191" src="assets/pnl_stress_light.png">
+  <img alt="Net PnL under execution stress: paper replication $138,639; with $0.02/share slippage $4,860; slippage plus NQ 09:25 filter $44,332; slippage plus QQQ 09:25 placebo $25,191" src="assets/pnl_stress_light.png">
 </picture>
 
 ---
@@ -91,7 +91,7 @@ close. In practice this is *intraday momentum-continuation with a 1R stop*.
 |---|---:|---:|---:|---:|---:|---:|---:|
 | 📄 Paper replication (no slippage) | $138,639 | 1,775 | $0.070 | 1.79 | 1.06 | 30.4% | 22.4% |
 | 💸 With slippage | $4,860 | 1,775 | $0.020 | 0.52 | 0.23 | 2.7% | 43.9% |
-| 🔀 Slippage + **NQ 09:25 filter** | $43,246 | 836 | $0.127 | **2.07** | 0.76 | 15.3% | 31.1% |
+| 🔀 Slippage + **NQ 09:25 filter** | $44,332 | 844 | $0.125 | **2.05** | 0.77 | 15.6% | 31.1% |
 | 🧪 Slippage + QQQ 09:25 placebo | $25,191 | 825 | $0.079 | 1.27 | 0.57 | 10.5% | 27.2% |
 | 🧺 QQQ buy & hold | — | — | — | — | 0.72 | 15.3% | 35.6% |
 
@@ -111,13 +111,13 @@ figure was an artifact of dropping bars where NQ was missing.
 **2. The NQ filter is more than a momentum proxy — my prior was wrong.** The
 control experiment replaces NQ with QQQ's *own* 09:25 pre-market bar (the placebo).
 If the filter were just two-bar momentum, the two would match. They don't: NQ
-delivers **$0.127/share (t = 2.07, significant at ~5%)** vs the placebo's
+delivers **$0.125/share (t = 2.05, significant at ~5%)** vs the placebo's
 **$0.079/share (t = 1.27, not significant)**. The cross-asset signal carries
 information beyond QQQ's own pre-open move.
 
 **3. …but the portfolio-level edge over buy & hold is *not* established.** The
-NQ-filter Sharpe (0.76) barely exceeds buy & hold (0.72), and their bootstrap 95%
-CIs overlap heavily (NQ filter **[0.04, 1.40]**, buy & hold **[−0.03, 1.47]**). A
+NQ-filter Sharpe (0.77) barely exceeds buy & hold (0.72), and their bootstrap 95%
+CIs overlap heavily (NQ filter **[0.05, 1.41]**, buy & hold **[−0.03, 1.47]**). A
 significant *per-trade* edge is not the same as a significant *strategy*.
 
 **4. The edge is a single-regime phenomenon.** This is the finding that would

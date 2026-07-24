@@ -86,6 +86,17 @@ class AnalysisTests(unittest.TestCase):
         pnl = table["net_pnl"].to_numpy()
         self.assertTrue(np.all(np.diff(pnl) <= 1e-9))
 
+    def test_slippage_sensitivity_honours_base_commission(self) -> None:
+        """A zero-slippage sweep point must equal the plain backtest at the same
+        commission -- the sweep inherits base_config instead of resetting costs."""
+        grid = np.array([0.0])
+        config = BacktestConfig(commission_per_share_per_side=0.0005)
+        swept = slippage_sensitivity(_two_sessions(), grid=grid, base_config=config)
+        direct = run_backtest(_two_sessions(), config=config)
+        self.assertAlmostEqual(
+            float(swept.loc[0, "net_pnl"]), direct.cumulative_pnl, places=6
+        )
+
     def test_placebo_uses_qqq_own_bar(self) -> None:
         # QQQ signal is bullish; a bullish 09:30 bar is its own confirmation,
         # so the placebo keeps both trades.

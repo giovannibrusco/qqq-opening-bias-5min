@@ -9,8 +9,8 @@
 <path d="M226,138 h22.037735849056606 a4,4 0 0 1 4,4 v12 a4,4 0 0 1 -4,4 h-22.037735849056606 z" fill="#c9c8c1"/>
 <text x="260.0377358490566" y="152.0" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12.5" fill="#0b0b0b" font-weight="600" text-anchor="start">0.23</text>
 <text x="216" y="192.0" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" fill="#52514e" font-weight="normal" text-anchor="end">Slippage + NQ 09:25 filter</text>
-<path d="M226,178 h82.0377358490566 a4,4 0 0 1 4,4 v12 a4,4 0 0 1 -4,4 h-82.0377358490566 z" fill="#2a78d6"/>
-<text x="320.0377358490566" y="192.0" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12.5" fill="#0b0b0b" font-weight="600" text-anchor="start">0.76</text>
+<path d="M226,178 h83.16981132075472 a4,4 0 0 1 4,4 v12 a4,4 0 0 1 -4,4 h-83.16981132075472 z" fill="#2a78d6"/>
+<text x="321.1698113207547" y="192.0" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12.5" fill="#0b0b0b" font-weight="600" text-anchor="start">0.77</text>
 <text x="216" y="232.0" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" fill="#52514e" font-weight="normal" text-anchor="end">Slippage + QQQ 09:25 placebo</text>
 <path d="M226,218 h60.528301886792434 a4,4 0 0 1 4,4 v12 a4,4 0 0 1 -4,4 h-60.528301886792434 z" fill="#c9c8c1"/>
 <text x="298.5283018867924" y="232.0" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12.5" fill="#0b0b0b" font-weight="600" text-anchor="start">0.57</text>
@@ -26,8 +26,8 @@
 <path d="M686,138 h6.657894736842106 a4,4 0 0 1 4,4 v12 a4,4 0 0 1 -4,4 h-6.657894736842106 z" fill="#c9c8c1"/>
 <text x="704.6578947368421" y="152.0" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12.5" fill="#0b0b0b" font-weight="600" text-anchor="start">2.7%</text>
 <text x="676" y="192.0" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" fill="#52514e" font-weight="normal" text-anchor="end">Slippage + NQ 09:25 filter</text>
-<path d="M686,178 h56.394736842105274 a4,4 0 0 1 4,4 v12 a4,4 0 0 1 -4,4 h-56.394736842105274 z" fill="#2a78d6"/>
-<text x="754.3947368421053" y="192.0" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12.5" fill="#0b0b0b" font-weight="600" text-anchor="start">15.3%</text>
+<path d="M686,178 h57.578947368421055 a4,4 0 0 1 4,4 v12 a4,4 0 0 1 -4,4 h-57.578947368421055 z" fill="#2a78d6"/>
+<text x="755.578947368421" y="192.0" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12.5" fill="#0b0b0b" font-weight="600" text-anchor="start">15.6%</text>
 <text x="676" y="232.0" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" fill="#52514e" font-weight="normal" text-anchor="end">Slippage + QQQ 09:25 placebo</text>
 <path d="M686,218 h37.44736842105263 a4,4 0 0 1 4,4 v12 a4,4 0 0 1 -4,4 h-37.44736842105263 z" fill="#c9c8c1"/>
 <text x="735.4473684210526" y="232.0" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12.5" fill="#0b0b0b" font-weight="600" text-anchor="start">10.5%</text>
@@ -55,16 +55,16 @@
 <line x1="226" y1="356" x2="226" y2="544" stroke="#c3c2b7" stroke-width="1"/>
 <text x="476" y="334" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="13.5" fill="#0b0b0b" font-weight="600" text-anchor="start">Avg PnL per share</text>
 <text x="676" y="362.0" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" fill="#52514e" font-weight="normal" text-anchor="end">Paper replication (no slippage)</text>
-<path d="M686,348 h62.14173228346456 a4,4 0 0 1 4,4 v12 a4,4 0 0 1 -4,4 h-62.14173228346456 z" fill="#c9c8c1"/>
-<text x="760.1417322834645" y="362.0" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12.5" fill="#0b0b0b" font-weight="600" text-anchor="start">$0.070</text>
+<path d="M686,348 h63.2 a4,4 0 0 1 4,4 v12 a4,4 0 0 1 -4,4 h-63.2 z" fill="#c9c8c1"/>
+<text x="761.2" y="362.0" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12.5" fill="#0b0b0b" font-weight="600" text-anchor="start">$0.070</text>
 <text x="676" y="402.0" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" fill="#52514e" font-weight="normal" text-anchor="end">With $0.02/share slippage</text>
-<path d="M686,388 h14.897637795275589 a4,4 0 0 1 4,4 v12 a4,4 0 0 1 -4,4 h-14.897637795275589 z" fill="#c9c8c1"/>
-<text x="712.8976377952756" y="402.0" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12.5" fill="#0b0b0b" font-weight="600" text-anchor="start">$0.020</text>
+<path d="M686,388 h15.2 a4,4 0 0 1 4,4 v12 a4,4 0 0 1 -4,4 h-15.2 z" fill="#c9c8c1"/>
+<text x="713.2" y="402.0" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12.5" fill="#0b0b0b" font-weight="600" text-anchor="start">$0.020</text>
 <text x="676" y="442.0" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" fill="#52514e" font-weight="normal" text-anchor="end">Slippage + NQ 09:25 filter</text>
 <path d="M686,428 h116.0 a4,4 0 0 1 4,4 v12 a4,4 0 0 1 -4,4 h-116.0 z" fill="#2a78d6"/>
-<text x="814.0" y="442.0" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12.5" fill="#0b0b0b" font-weight="600" text-anchor="start">$0.127</text>
+<text x="814.0" y="442.0" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12.5" fill="#0b0b0b" font-weight="600" text-anchor="start">$0.125</text>
 <text x="676" y="482.0" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" fill="#52514e" font-weight="normal" text-anchor="end">Slippage + QQQ 09:25 placebo</text>
-<path d="M686,468 h70.64566929133858 a4,4 0 0 1 4,4 v12 a4,4 0 0 1 -4,4 h-70.64566929133858 z" fill="#c9c8c1"/>
-<text x="768.6456692913385" y="482.0" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12.5" fill="#0b0b0b" font-weight="600" text-anchor="start">$0.079</text>
+<path d="M686,468 h71.84 a4,4 0 0 1 4,4 v12 a4,4 0 0 1 -4,4 h-71.84 z" fill="#c9c8c1"/>
+<text x="769.84" y="482.0" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12.5" fill="#0b0b0b" font-weight="600" text-anchor="start">$0.079</text>
 <line x1="686" y1="342" x2="686" y2="490" stroke="#c3c2b7" stroke-width="1"/>
 </svg>
