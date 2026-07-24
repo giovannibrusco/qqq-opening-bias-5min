@@ -168,7 +168,7 @@ the edge was already decaying at the end of the sample, which makes extending to
 
 **Open**
 
-- [ ] Extend the sample to 2023–2026 (true out-of-sample; tests the 2023 decay)
+- [ ] Extend the sample to 2023–2026 (true out-of-sample; tests the 2023 decay) — downloader ready: [`scripts/download_ib.py`](scripts/download_ib.py), see [`data/README.md`](data/README.md)
 - [ ] Walk-forward / train–test split to de-bias the in-sample filter choice
 - [ ] Volatility-scaled stop slippage for gap days
 - [ ] Dividend- and risk-free-adjusted benchmark
@@ -193,7 +193,8 @@ the edge was already decaying at the end of the sample, which makes extending to
 ├── 🧪 tests/                         # unit tests for the engine and the analysis
 ├── ⚙️ scripts/
 │   ├── run_analysis.py               # reproduce every scenario + statistic from the CSVs
-│   └── export_equity.py             # dump daily equity curves for the hero chart
+│   ├── export_equity.py              # dump daily equity curves for the hero chart
+│   └── download_ib.py                # fetch QQQ/NQ bars from IB Gateway in the right schema
 └── 📦 requirements.txt
 ```
 

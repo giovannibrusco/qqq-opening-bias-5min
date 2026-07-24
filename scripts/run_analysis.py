@@ -9,6 +9,7 @@ Only the cross-asset scenarios consult NQ, per-session, inside the engine.
 from __future__ import annotations
 
 import argparse
+import datetime as dt
 
 import numpy as np
 import pandas as pd
@@ -36,6 +37,8 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--qqq", required=True, help="Path to QQQ 5-minute CSV")
     parser.add_argument("--nq", required=True, help="Path to NQ 1-minute CSV")
+    parser.add_argument("--start", default=None, help="First session (YYYY-MM-DD); default = loader default")
+    parser.add_argument("--end", default=None, help="Last session (YYYY-MM-DD); default = loader default")
     parser.add_argument(
         "--equity-out",
         default=None,
@@ -44,10 +47,36 @@ def parse_args() -> argparse.Namespace:
     return parser.parse_args()
 
 
+
+def _window(args) -> dict:
+    """Only override the loaders' defaults when the user supplies a bound."""
+    bounds = {}
+    if args.start:
+        bounds["start"] = dt.date.fromisoformat(args.start)
+    if args.end:
+        bounds["end"] = dt.date.fromisoformat(args.end)
+    return bounds
+
+
+
+def _check_loaded(qqq, nq, args) -> None:
+    """Fail with a useful message when the date window excludes the data."""
+    for name, frame, path in (("QQQ", qqq, args.qqq), ("NQ", nq, args.nq)):
+        if frame.empty:
+            raise SystemExit(
+                f"No {name} bars in range from {path}.\n"
+                "The loaders default to the paper's window (2016-01-01 to "
+                "2023-02-17); pass --start/--end to analyse a different period, "
+                "e.g. --start 2023-02-01 --end 2026-01-01"
+            )
+
+
 def main() -> None:
     args = parse_args()
-    qqq = load_qqq_bars(args.qqq)
-    nq = load_nq_bars(args.nq)
+    window = _window(args)
+    qqq = load_qqq_bars(args.qqq, **window)
+    nq = load_nq_bars(args.nq, **window)
+    _check_loaded(qqq, nq, args)
     trading_dates = pd.to_datetime(qqq["date"]).dt.normalize().unique()
 
     results = {
