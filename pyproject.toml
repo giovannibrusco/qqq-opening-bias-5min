@@ -20,7 +20,7 @@ dependencies = [
 ]
 
 [project.urls]
-Repository = "https://github.com/giovannibrusco/qqq-opening-bias-5min"
+Repository = "https://github.com/giovannibrusco/zarattini-2023-orb-qqq"
 Paper = "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4416622"
 
 [tool.setuptools.packages.find]

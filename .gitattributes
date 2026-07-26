@@ -1,0 +1,7 @@
+# Language stats: notebooks are narrative output, the package is the real code.
+# Without this GitHub reports the repo as "Jupyter Notebook" purely on byte count.
+*.ipynb linguist-vendored
+
+# Generated chart assets should not count toward language statistics either.
+assets/*.svg linguist-generated
+docs/images/*.svg linguist-generated

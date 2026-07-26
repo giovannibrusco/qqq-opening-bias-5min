@@ -14,7 +14,7 @@ followed by three questions the paper never asks:
 > **3. Is the edge structural or a single-regime artifact?** → *Mostly a 2022 phenomenon.*
 
 > [!NOTE]
-> **Companion repo, different paper.** [`replica-zarattini`](https://github.com/giovannibrusco/replica-zarattini)
+> **Companion repo, different paper.** [`zarattini-2024-momentum-spy`](https://github.com/giovannibrusco/zarattini-2024-momentum-spy)
 > replicates Zarattini, Aziz & Barbon (2024), *Beat the Market* ([SSRN 4824172](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4824172)) —
 > an intraday **momentum** strategy on **SPY / ES futures**.
 > **This** repo replicates Zarattini & Aziz (2023) ([SSRN 4416622](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4416622)) —
@@ -34,11 +34,11 @@ followed by three questions the paper never asks:
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/equity_dark.png">
-  <img alt="Equity curves on a log scale, 2016-2023: the paper's no-cost replication reaches $164k (6.5x); the NQ-filtered strategy after slippage ends at $69k (2.8x), neck-and-neck with QQQ buy & hold at $69k (2.7x); slippage-only lags at $30k" src="assets/equity_light.png">
+  <img alt="Equity curves on a log scale, 2016-2023: the paper's no-slippage replication reaches $164k (6.5x); the NQ-filtered strategy after slippage ends at $69k (2.8x), neck-and-neck with QQQ buy & hold at $69k (2.7x); slippage-only lags at $30k" src="assets/equity_light.png">
 </picture>
 
 *One picture, the whole thesis: the realistic strategy (blue) tracks buy & hold
-almost exactly, while the paper's cost-free curve (gray, top) floats far above
+almost exactly, while the paper's no-slippage curve (gray, top) floats far above
 anything achievable. Shaded bands mark the 2020 COVID crash and the 2022 selloff —
 where most of the active edge is actually made.*
 
@@ -153,7 +153,7 @@ the edge was already decaying at the end of the sample, which makes extending to
 - **Stale sample.** Data ends Feb 2023. Post-2023 data is free out-of-sample
   evidence and would directly test the 2023 decay signal.
 - **Cost model.** Stop slippage is a flat $0.04; gap/halt days deserve
-  volatility-scaled slippage. EoD exits are modelled as costless (defensible for a
+  volatility-scaled slippage. EoD exits carry no exit slippage (defensible for a
   QQQ MOC, but stated explicitly).
 - **Benchmark.** Buy & hold is price-return (no dividends, ~0.6%/yr); Sharpe is not
   risk-free-adjusted (non-neutral over the 2016–2023 rate path).
@@ -191,6 +191,7 @@ the edge was already decaying at the end of the sample, which makes extending to
 ├── 🗃️ data/                          # place CSVs here — not versioned, see data/README.md
 ├── 📚 docs/
 │   ├── README_TEMPLATE.md            # reusable README skeleton for sibling repos
+│   ├── FIGURE_MAP.md                 # every published number and where it is duplicated
 │   └── images/                       # standalone figures
 ├── 📓 notebooks/
 │   ├── QQQ_bias.ipynb                # v1 — original replication (kept for provenance)
