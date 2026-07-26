@@ -13,6 +13,14 @@ followed by three questions the paper never asks:
 > **2. Can a cross-market confirmation filter buy it back?** → *Partially, and it is more than a momentum proxy.*
 > **3. Is the edge structural or a single-regime artifact?** → *Mostly a 2022 phenomenon.*
 
+> [!NOTE]
+> **Companion repo, different paper.** [`replica-zarattini`](https://github.com/giovannibrusco/replica-zarattini)
+> replicates Zarattini, Aziz & Barbon (2024), *Beat the Market* ([SSRN 4824172](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4824172)) —
+> an intraday **momentum** strategy on **SPY / ES futures**.
+> **This** repo replicates Zarattini & Aziz (2023) ([SSRN 4416622](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4416622)) —
+> an **opening-range breakout** on **QQQ**, confirmed with **NQ futures**.
+> Same lead author, different papers, instruments and codebases.
+
 ---
 
 ## 🧭 TL;DR
@@ -181,7 +189,9 @@ the edge was already decaying at the end of the sample, which makes extending to
 ├── 📄 README.md · LICENSE · NOTICE.md · pyproject.toml
 ├── 🖼️ assets/                        # README charts (light + dark) + equity_curves.csv
 ├── 🗃️ data/                          # place CSVs here — not versioned, see data/README.md
-├── 📚 docs/images/                   # standalone figures
+├── 📚 docs/
+│   ├── README_TEMPLATE.md            # reusable README skeleton for sibling repos
+│   └── images/                       # standalone figures
 ├── 📓 notebooks/
 │   ├── QQQ_bias.ipynb                # v1 — original replication (kept for provenance)
 │   └── QQQ_bias_v2.ipynb             # v2 — narrative analysis on the package
