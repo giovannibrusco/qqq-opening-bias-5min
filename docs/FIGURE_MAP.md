@@ -9,17 +9,18 @@ generated, so a chart figure is edited in the generator, not in the SVG.
 
 ## Regenerating
 
-Numbers originate from one command:
+Reproduce the tabular analysis and every chart with:
 
 ```bash
 python scripts/run_analysis.py --qqq data/QQQ_5min_10years_UTC.csv --nq data/nq-10y-1min.csv
-python scripts/export_equity.py            # refreshes assets/equity_curves.csv
+python scripts/generate_charts.py --qqq data/QQQ_5min_10years_UTC.csv --nq data/nq-10y-1min.csv
 ```
 
-Charts are then rebuilt from those outputs and re-rendered to PNG. **The chart
-generators are not currently in the repo** — they live outside it, which means a
-figure change requires regenerating charts by hand. *(Open item: vendor the
-generators into `scripts/` so charts are reproducible like everything else.)*
+The chart generator runs the packaged backtest and analysis functions, refreshes
+`assets/equity_curves.csv`, and writes every light/dark SVG and 2x PNG used by the
+README. No published result is hard-coded in the generator. CI runs the unit
+tests and smoke-tests the generator CLI; full chart rendering stays local
+because the licensed market-data CSVs are intentionally not versioned.
 
 ## The map
 

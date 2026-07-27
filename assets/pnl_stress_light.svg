@@ -1,17 +1,123 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="820" height="250" viewBox="0 0 820 250" role="img">
-<text x="16" y="26" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15" fill="#0b0b0b" font-weight="700" text-anchor="start">Net PnL under execution stress</text>
-<text x="16" y="46" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="11.5" fill="#898781" font-weight="normal" text-anchor="start">Same signal, escalating cost realism — Jan 2016 to Feb 2023, $25k start, USD</text>
-<text x="256" y="84.0" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12.5" fill="#52514e" font-weight="normal" text-anchor="end">Paper replication (no slippage)</text>
-<path d="M266,70 h426.0 a4,4 0 0 1 4,4 v12 a4,4 0 0 1 -4,4 h-426.0 z" fill="#c9c8c1"/>
-<text x="704.0" y="84.0" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="13" fill="#0b0b0b" font-weight="700" text-anchor="start">$138,639</text>
-<text x="256" y="128.0" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12.5" fill="#52514e" font-weight="normal" text-anchor="end">With $0.02/share slippage</text>
-<path d="M266,114 h11.073680566074481 a4,4 0 0 1 4,4 v12 a4,4 0 0 1 -4,4 h-11.073680566074481 z" fill="#c9c8c1"/>
-<text x="289.0736805660745" y="128.0" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="13" fill="#0b0b0b" font-weight="700" text-anchor="start">$4,860</text>
-<text x="256" y="172.0" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12.5" fill="#52514e" font-weight="normal" text-anchor="end">Slippage + NQ 09:25 filter</text>
-<path d="M266,158 h133.4992606697971 a4,4 0 0 1 4,4 v12 a4,4 0 0 1 -4,4 h-133.4992606697971 z" fill="#2a78d6"/>
-<text x="411.4992606697971" y="172.0" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="13" fill="#0b0b0b" font-weight="700" text-anchor="start">$44,332</text>
-<text x="256" y="216.0" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12.5" fill="#52514e" font-weight="normal" text-anchor="end">Slippage + QQQ 09:25 placebo</text>
-<path d="M266,202 h74.13191093415273 a4,4 0 0 1 4,4 v12 a4,4 0 0 1 -4,4 h-74.13191093415273 z" fill="#c9c8c1"/>
-<text x="352.13191093415276" y="216.0" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="13" fill="#0b0b0b" font-weight="700" text-anchor="start">$25,191</text>
-<line x1="266" y1="62" x2="266" y2="230" stroke="#c3c2b7" stroke-width="1"/>
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="590.4pt" height="180pt" viewBox="0 0 590.4 180" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>scripts/generate_charts.py</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 180
+L 590.4 180
+L 590.4 0
+L 0 0
+z
+" style="fill: #fcfcfb"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 200.736 162
+L 554.976 162
+L 554.976 50.4
+L 200.736 50.4
+z
+" style="fill: #fcfcfb"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 200.736 55.472727
+L 491.096656 55.472727
+L 491.096656 69.466458
+L 200.736 69.466458
+z
+" clip-path="url(#p29fa18e309)" style="fill: #c9c8c1"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 200.736 84.626332
+L 210.913641 84.626332
+L 210.913641 98.620063
+L 200.736 98.620063
+z
+" clip-path="url(#p29fa18e309)" style="fill: #c9c8c1"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 200.736 113.779937
+L 293.583658 113.779937
+L 293.583658 127.773668
+L 200.736 127.773668
+z
+" clip-path="url(#p29fa18e309)" style="fill: #2a78d6"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 200.736 142.933542
+L 253.495838 142.933542
+L 253.495838 156.927273
+L 200.736 156.927273
+z
+" clip-path="url(#p29fa18e309)" style="fill: #c9c8c1"/>
+   </g>
+   <g id="matplotlib.axis_1"/>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_1"/>
+     <g id="text_1">
+      <text style="font-size: 9px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: end; fill: #66645f" x="197.236" y="65.888889" transform="rotate(-0 197.236 65.888889)">Paper replication (no slippage)</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_2"/>
+     <g id="text_2">
+      <text style="font-size: 9px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: end; fill: #66645f" x="197.236" y="95.042494" transform="rotate(-0 197.236 95.042494)">With $0.02/share slippage</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_3"/>
+     <g id="text_3">
+      <text style="font-size: 9px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: end; fill: #66645f" x="197.236" y="124.196099" transform="rotate(-0 197.236 124.196099)">Slippage + NQ 09:25 filter</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_4"/>
+     <g id="text_4">
+      <text style="font-size: 9px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: end; fill: #66645f" x="197.236" y="153.349704" transform="rotate(-0 197.236 153.349704)">Slippage + QQQ 09:25 placebo</text>
+     </g>
+    </g>
+   </g>
+   <g id="text_5">
+    <text style="font-weight: 700; font-size: 10.5px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #0b0b0b" x="496.323148" y="65.197542" transform="rotate(-0 496.323148 65.197542)">$138,639</text>
+   </g>
+   <g id="text_6">
+    <text style="font-weight: 700; font-size: 10.5px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #0b0b0b" x="216.140132" y="94.351147" transform="rotate(-0 216.140132 94.351147)">$4,860</text>
+   </g>
+   <g id="text_7">
+    <text style="font-weight: 700; font-size: 10.5px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #0b0b0b" x="298.81015" y="123.504752" transform="rotate(-0 298.81015 123.504752)">$44,332</text>
+   </g>
+   <g id="text_8">
+    <text style="font-weight: 700; font-size: 10.5px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #0b0b0b" x="258.72233" y="152.658357" transform="rotate(-0 258.72233 152.658357)">$25,191</text>
+   </g>
+  </g>
+  <g id="text_9">
+   <text style="font-weight: 700; font-size: 11.5px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #0b0b0b" x="11.808" y="15.938203" transform="rotate(-0 11.808 15.938203)">Net PnL under execution stress</text>
+  </g>
+  <g id="text_10">
+   <text style="font-size: 8.2px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #66645f" x="11.808" y="30.710719" transform="rotate(-0 11.808 30.710719)">Same signal, escalating cost realism — $25k starting capital, USD</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p29fa18e309">
+   <rect x="200.736" y="50.4" width="354.24" height="111.6"/>
+  </clipPath>
+ </defs>
 </svg>
