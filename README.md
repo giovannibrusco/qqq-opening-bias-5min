@@ -188,12 +188,12 @@ the edge was already decaying at the end of the sample, which makes extending to
 
 ```
 ├── 📄 README.md · LICENSE · NOTICE.md · pyproject.toml
+├── 🔁 .github/workflows/tests.yml    # tests on Python 3.10–3.12 for pushes and PRs
 ├── 🖼️ assets/                        # README charts (light + dark) + equity_curves.csv
 ├── 🗃️ data/                          # place CSVs here — not versioned, see data/README.md
 ├── 📚 docs/
 │   ├── README_TEMPLATE.md            # reusable README skeleton for sibling repos
-│   ├── FIGURE_MAP.md                 # every published number and where it is duplicated
-│   └── images/                       # standalone figures
+│   └── FIGURE_MAP.md                 # every published number and where it is duplicated
 ├── 📓 notebooks/
 │   ├── QQQ_bias.ipynb                # v1 — original replication (kept for provenance)
 │   └── QQQ_bias_v2.ipynb             # v2 — narrative analysis on the package
@@ -206,6 +206,7 @@ the edge was already decaying at the end of the sample, which makes extending to
 ├── ⚙️ scripts/
 │   ├── run_analysis.py               # reproduce every scenario + statistic from the CSVs
 │   ├── export_equity.py              # dump daily equity curves for the hero chart
+│   ├── generate_charts.py            # rebuild every README chart (light/dark SVG + PNG)
 │   └── download_ib.py                # fetch QQQ/NQ bars from IB Gateway in the right schema
 └── 📦 requirements.txt
 ```
@@ -219,6 +220,7 @@ python -m pytest                      # run the test suite (no data needed; also
 
 # drop the two CSVs into data/ (schema in data/README.md), then reproduce everything:
 python scripts/run_analysis.py --qqq data/QQQ_5min_10years_UTC.csv --nq data/nq-10y-1min.csv
+python scripts/generate_charts.py --qqq data/QQQ_5min_10years_UTC.csv --nq data/nq-10y-1min.csv
 
 # or explore interactively:
 jupyter lab notebooks/QQQ_bias_v2.ipynb   # Run ▸ Run All Cells
