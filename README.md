@@ -1,5 +1,6 @@
 # 📈 QQQ Opening Range Bias — Replication & Execution Stress Test
 
+[![tests](https://github.com/giovannibrusco/zarattini-2023-orb-qqq/actions/workflows/tests.yml/badge.svg)](https://github.com/giovannibrusco/zarattini-2023-orb-qqq/actions/workflows/tests.yml)
 [![Python](https://img.shields.io/badge/python-3.10%2B-blue?logo=python&logoColor=white)](https://www.python.org/)
 [![Jupyter](https://img.shields.io/badge/jupyter-notebook-orange?logo=jupyter&logoColor=white)](https://jupyter.org/)
 [![pandas](https://img.shields.io/badge/pandas-2.x-150458?logo=pandas&logoColor=white)](https://pandas.pydata.org/)
@@ -214,7 +215,7 @@ the edge was already decaying at the end of the sample, which makes extending to
 ```bash
 python3 -m venv .venv && source .venv/bin/activate
 pip install -e .                      # installs the qqq_opening_bias package
-python -m pytest                      # run the test suite (no data needed)
+python -m pytest                      # run the test suite (no data needed; also runs in CI)
 
 # drop the two CSVs into data/ (schema in data/README.md), then reproduce everything:
 python scripts/run_analysis.py --qqq data/QQQ_5min_10years_UTC.csv --nq data/nq-10y-1min.csv

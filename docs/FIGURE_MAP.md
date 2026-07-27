@@ -56,6 +56,11 @@ description, where nothing will flag them as stale:
 If a re-run moves any of these, the repo description must be edited by hand in
 the GitHub UI.
 
+**Rename-dependent URLs.** Three references hard-code the repository name and
+must be updated together if it changes again: the CI badge and its link in the
+README, and `Repository` in `pyproject.toml`. README *images* use relative paths
+and survive a rename untouched.
+
 ## Wording that is also a claim
 
 - **"no slippage"**, not "no costs" / "cost-free": the paper's $0.0005/side
